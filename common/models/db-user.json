@@ -1,0 +1,32 @@
+{
+  "name": "DBUser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "students": {
+      "type": "hasMany",
+      "model": "Student",
+      "foreignKey": "stid",
+      "through": "Mark"
+    },
+    "courses": {
+      "type": "hasMany",
+      "model": "Course",
+      "foreignKey": "ccid"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

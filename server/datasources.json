@@ -1,0 +1,17 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "CourseDs": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "courseDB",
+    "password": "",
+    "name": "CourseDs",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}

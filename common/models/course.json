@@ -1,0 +1,32 @@
+{
+  "name": "Course",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cid": {
+      "type": "number",
+      "required": true
+    },
+    "cName": {
+      "type": "string",
+      "required": true
+    },
+    "cp": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "dBUsers": {
+      "type": "hasMany",
+      "model": "DBUser",
+      "foreignKey": "cid"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
